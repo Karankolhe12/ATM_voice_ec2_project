@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Balance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body onload="speak('Your current balance is {{ balance }}')">
+    <div class="container">
+        <h1>Current Balance</h1>
+        <p>Your current balance is {{ balance }}</p>
+        <a href="{{ url_for('menu') }}">Back to Menu</a>
+    </div>
+    <script>
+        function speak(text) {
+            var speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>

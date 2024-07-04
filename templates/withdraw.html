@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Withdraw Cash</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Withdraw Cash</h1>
+        <form method="POST">
+            <label for="amount">Enter Amount:</label>
+            <input type="number" name="amount" required>
+            <button type="submit" onclick="speak('Please enter the amount you wish to withdraw')">Withdraw</button>
+        </form>
+        <a href="{{ url_for('menu') }}">Back to Menu</a>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+    <script>
+        function speak(text) {
+            var speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>

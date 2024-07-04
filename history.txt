@@ -1,0 +1,44 @@
+money is sended to didi on 8789323942
+debit 1500 and current balance is 500  2023-08-10 16:42:37.408713
+deposit 400 and your current balance is  900  2023-08-10 16:43:40.748845
+debit 899 and current balance is 1  2023-08-10 16:44:57.284849
+the program will be end  
+
+
+       new program is start  2024-01-21 14:42:40.977680 
+                        2000 is added
+ the program will be end  
+
+
+       new program is start  2024-07-03 12:29:29.987191 
+                        2000 is added
+ debit 300 and current balance is 1700  2024-07-03 12:29:55.539734
+Deposit 500 and current balance is 2500 2024-07-03 16:02:24.443387
+Deposit 222 and current balance is 2222 2024-07-03 16:19:29.525916
+Debit 222 and current balance is 1778 2024-07-03 16:23:50.471159
+Deposit 222 and current balance is 2222 2024-07-03 16:26:23.058417
+Deposit 33 and current balance is 2033 2024-07-03 16:28:06.122462
+the program will be end  
+
+
+       new program is start  2024-07-03 16:29:04.973208 
+                        2000 is added
+ the program will be end  
+
+
+       new program is start  2024-07-03 16:29:14.257671 
+                        2000 is added
+ debit 400 and current balance is 1600  2024-07-03 16:29:41.626510
+debit 300 and current balance is 1700  2024-07-03 16:51:09.031054
+money sent to Karan Kolhe (7249077727) debit 500 and current balance is 1200  2024-07-03 16:52:16.886713
+debit 122 and current balance is 1878  2024-07-03 16:57:52.879939
+money sent to job1 (7249077727) debit 122 and current balance is 1756  2024-07-03 16:58:28.668192
+debit 400 and current balance is 1600  2024-07-03 17:03:50.295708
+debit 123 and current balance is 1877  2024-07-03 17:11:21.057962
+money sent to karan (7249077727) debit 2 and current balance is 1875  2024-07-03 17:12:10.538517
+deposit 500 and current balance is 2375  2024-07-03 17:12:34.405034
+debit 8 and current balance is 1992  2024-07-03 17:29:48.527862
+money sent to Karan (7249077727) debit 11 and current balance is 1989  2024-07-03 17:35:17.898318
+debit 22 and current balance is 1945  2024-07-03 17:36:01.939438
+debit 22 and current balance is 1945  2024-07-03 17:36:04.463861
+money sent to kk (21212) debit 22 and current balance is 1978  2024-07-03 22:35:33.310080

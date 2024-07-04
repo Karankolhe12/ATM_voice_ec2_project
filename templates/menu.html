@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body onload="speak('Please select one of the options')">
+    <div class="container">
+        <h1>ATM Menu</h1>
+        <ul>
+            <li><a href="{{ url_for('withdraw') }}">Withdraw Cash</a></li>
+            <li><a href="{{ url_for('add') }}">Add Money</a></li>
+            <li><a href="{{ url_for('check_balance') }}">Check Balance</a></li>
+            <li><a href="{{ url_for('history') }}">View History</a></li>
+            <li><a href="{{ url_for('send') }}">Send Money</a></li>
+        </ul>
+    </div>
+    <script>
+        function speak(text) {
+            var speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>

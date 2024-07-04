@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Money</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Send Money</h1>
+    <form method="POST">
+        <label for="name">Enter Name:</label>
+        <input type="text" name="name" required><br>
+        <label for="mobile">Enter Mobile Number:</label>
+        <input type="text" name="mobile" required><br>
+        <label for="amount">Enter Amount:</label>
+        <input type="number" name="amount" required>
+        <button type="submit" onclick="speak('Please enter the details and the amount you wish to send')">Send</button>
+    </form>
+    <a href="{{ url_for('menu') }}">Back to Menu</a>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <script>
+        function speak(text) {
+            var speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
