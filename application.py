@@ -37,7 +37,7 @@ def withdraw():
         amount = int(request.form['amount'])
         if amount <= balance:
             balance -= amount
-            play_sound('static/mp2.mp3')
+            
             with open("history.txt", "a") as ko:
                 ko.write(f"debit {amount} and current balance is {balance}  {datetime.datetime.now()}\n")
             flash(f"{amount} withdrawn. Current balance: {balance}")
@@ -51,7 +51,7 @@ def add():
     if request.method == 'POST':
         amount = int(request.form['amount'])
         balance += amount
-        play_sound('static/send.mp3')
+        
         with open("history.txt", "a") as ko:
             ko.write(f"deposit {amount} and current balance is {balance}  {datetime.datetime.now()}\n")
         flash(f"{amount} added. Current balance: {balance}")
@@ -76,7 +76,7 @@ def send():
         amount = int(request.form['amount'])
         if amount <= balance:
             balance -= amount
-            play_sound('static/send.mp3')
+            
             with open("history.txt", "a") as ko:
                 ko.write(f"money sent to {name} ({mobile}) debit {amount} and current balance is {balance}  {datetime.datetime.now()}\n")
             flash(f"Money sent to {name}. Current balance: {balance}")
