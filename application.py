@@ -4,8 +4,8 @@ import time
 import os
 from pygame import mixer
 
-application = Flask(__name__)
-application.secret_key = 'your_secret_key'
+app = Flask(__name__)
+
 
 balance = 2000
 
@@ -15,7 +15,7 @@ def play_sound(file):
     mixer.music.play()
     time.sleep(3)
 
-@application.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         pin = request.form['pin']
@@ -26,11 +26,11 @@ def index():
             flash("Incorrect pin")
     return render_template('index.html')
 
-@application.route('/menu')
+@app.route('/menu')
 def menu():
     return render_template('menu.html')
 
-@application.route('/withdraw', methods=['GET', 'POST'])
+@app.route('/withdraw', methods=['GET', 'POST'])
 def withdraw():
     global balance
     if request.method == 'POST':
@@ -45,7 +45,7 @@ def withdraw():
             flash("Insufficient balance")
     return render_template('withdraw.html')
 
-@application.route('/add', methods=['GET', 'POST'])
+@app.route('/add', methods=['GET', 'POST'])
 def add():
     global balance
     if request.method == 'POST':
@@ -57,17 +57,17 @@ def add():
         flash(f"{amount} added. Current balance: {balance}")
     return render_template('add.html')
 
-@application.route('/balance')
+@app.route('/balance')
 def check_balance():
     return render_template('balance.html', balance=balance)
 
-@application.route('/history')
+@app.route('/history')
 def history():
     with open("history.txt") as kp:
         history = kp.read()
     return render_template('history.html', history=history)
 
-@application.route('/send', methods=['GET', 'POST'])
+@app.route('/send', methods=['GET', 'POST'])
 def send():
     global balance
     if request.method == 'POST':
@@ -85,4 +85,4 @@ def send():
     return render_template('send.html')
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    app.run(debug=True)
