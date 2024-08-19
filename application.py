@@ -5,8 +5,7 @@ import os
 from pygame import mixer
 
 app = Flask(__name__)
-
-
+application.secret_key = 'your_secret_key'
 balance = 2000
 
 def play_sound(file):
